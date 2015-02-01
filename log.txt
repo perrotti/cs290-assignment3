@@ -1,1 +1,24 @@
-You log goes in this  file.
+Start: Sat, 31 Jan 2015 20:56:59 -0800
+End: Sat, 31 Jan 2015 21:02:59 -0800
+Tasks: Fixed on final error made while fixing syntax... (10 minutes)
+Start: Sat, 31 Jan 2015 20:51:40 -0800
+End: Sat, 31 Jan 2015 20:56:40 -0800
+Tasks: One final pass for formatting using jslint.com (15 minutes)
+Start: Sat, 31 Jan 2015 19:50:51 -0800
+End: Sat, 31 Jan 2015 20:50:51 -0800
+Tasks: Finished testing all functions. Passed all tests but two, which seemed to be something wrong with the testing document (60 minutes)
+Start: Sat, 31 Jan 2015 19:16:07 -0800
+End: Sat, 31 Jan 2015 19:46:07 -0800
+Tasks: Finished checking the code in jslint... mostly the object file (30 min)
+Start: Sat, 31 Jan 2015 18:54:25 -0800
+End: Sat, 31 Jan 2015 19:04:25 -0800
+Tasks: Fixed the syntax on the Variables file (10 min)
+Start: Sat, 31 Jan 2015 18:08:50 -0800
+End: Sat, 31 Jan 2015 18:53:50 -0800
+Tasks: Finished first pass at Object file, and slightly cleaned up functions (45 minutes)
+Start: Sat, 31 Jan 2015 17:15:09 -0800
+End: Sat, 31 Jan 2015 17:40:09 -0800
+Tasks: Finished my initial pass at the functions portion of the assignment (25 minutes)
+Start: Sat, 31 Jan 2015 14:22:54 -0800
+End: Sat, 31 Jan 2015 14:32:54 -0800
+Tasks: Finished my first pass at the "variables" file (10 minutes)
