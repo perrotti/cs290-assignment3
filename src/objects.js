@@ -10,12 +10,12 @@
 
 function returnObjectLiteral() {
   // Shows up as error on jslint... but can't find an error
-  return (var objectLiteral = { 
+  return { 
     type: "Goldfish",
     brand: "Pepperidge Farm",
     flavor: "Cheddar",
-    count: 200
-  };) //Modify ONLY this line
+    count: 2000
+  }; //Modify ONLY this line
   //end your code
 }
 
@@ -41,22 +41,24 @@ function returnObjectLiteral() {
 * totalReceived() - returns an integer indicating the total number of messages
 * received
 */
-
+// Fails parseGit function #6... but passes 7. Printed to console and everything worked fine. 
+// I'm guessing it's an issue with the testing code
 //your code here
-function MessageLog(user) {
+var MessageLog = function(user) {
   this.user = user;
-  this.lastMessageReceived = "";
+  this.lastMessage = undefined;
   this.sentMessageCount = 0;
   this.receivedMessageCount = 0;
-  this.sentMessageArray = [null, null, null, null, null];
+  this.sentMessageArray = [];
   this.logMessage = function (messageText, direction) {
     if (direction === 0) {
+	  this.lastMessage = messageText;
       this.sentMessageArray.unshift(messageText);
       this.sentMessageCount++;
       this.sentMessageArray = this.sentMessageArray.splice(0, 5);
     } else if (direction === 1) {
       this.receivedMessageCount++;
-      this.lastMessageReceived = messageText;
+      this.lastMessage = messageText;
     }
     return undefined;
   };
@@ -81,7 +83,7 @@ function MessageLog(user) {
 */
 //your code here
 MessageLog.prototype.lastReceivedMessage = function () {
-  return this.lastMessageReceived;
+  return (this.lastMessage);
 };
 //end your code
 

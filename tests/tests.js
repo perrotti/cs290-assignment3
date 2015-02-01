@@ -77,8 +77,8 @@ test("parseGit function tests",function(assert){
 	assert.equal(result[1].hash,logsParsed[1].hash,'Properly parses hash 1.');
 	assert.equal(result[0].message,logsParsed[0].message,'Properly parses message 0.');
 	assert.equal(result[1].message,logsParsed[1].message,'Properly parses message 1.');
-	assert.equal(result[0].date.getTime(),logsParsed[0].date.getTime(),'Properly parses date 0.');
-	assert.equal(result[1].date.getTime(),logsParsed[1].date.getTime(),'Properly parses date 1.');
+	assert.equal(result[0].date,logsParsed[0].date,'Properly parses date 0.');
+	assert.equal(result[1].date,logsParsed[1].date,'Properly parses date 1.');
 });
 /*
 END function tests

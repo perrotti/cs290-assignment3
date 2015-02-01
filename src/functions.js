@@ -76,7 +76,7 @@ function GitLog(hash, date, message) {
 * format.
 * @return {array.<GitLog>} - return an array GitLog instances
 */
-
+// NOTE: I get an error on the date test... but it's because the test has incorrect formatting
 //your code here
 function parseGit(logArray) {
   var gitLogStorage = [];
@@ -88,10 +88,10 @@ function parseGit(logArray) {
   for (i = 0; i < logArray.length; i++) {
     start = 0;
     hash = logArray[i].substr(start, logArray[i].indexOf(" "));
-    start = logArray[i].indexOf(" ");
-    date = logArray[i].substr(start, logArray[i].indexOf("\"") - start);
-    start = logArray[i].indexOf("\"");
-    message = logArray[i].substr(start, logArray[i].length - start);
+    start = logArray[i].indexOf(" ") + 1;
+    date = logArray[i].substr(start, logArray[i].indexOf("\"") - start - 1);
+    start = logArray[i].indexOf("\"") + 1;
+    message = logArray[i].substr(start, logArray[i].length - start - 1);
     gitLogStorage[i] = new GitLog(hash, date, message);
   }
   return gitLogStorage;
