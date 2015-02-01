@@ -41,7 +41,7 @@ bar = function (inputArray) {
     inputArray[index] = inputArray[index] * 2;
   }
   return true;
-}
+};
 //end your code
 
 /**
@@ -92,7 +92,7 @@ function parseGit(logArray) {
     date = logArray[i].substr(start, logArray[i].indexOf("\"") - start);
     start = logArray[i].indexOf("\"");
     message = logArray[i].substr(start, logArray[i].length - start);
-    gitLogStorage[i] = GitLog(hash, date, message);
+    gitLogStorage[i] = new GitLog(hash, date, message);
   }
   return gitLogStorage;
 }
