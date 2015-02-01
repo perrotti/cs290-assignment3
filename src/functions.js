@@ -76,7 +76,8 @@ function GitLog(hash, date, message) {
 * format.
 * @return {array.<GitLog>} - return an array GitLog instances
 */
-// NOTE: I get an error on the date test... but it's because the test has incorrect formatting
+/* NOTE: I get an error on the date test... 
+   but it's because the test has incorrect formatting I believe */
 //your code here
 function parseGit(logArray) {
   var gitLogStorage = [];

@@ -10,7 +10,7 @@
 
 function returnObjectLiteral() {
   // Shows up as error on jslint... but can't find an error
-  return { 
+  return {
     type: "Goldfish",
     brand: "Pepperidge Farm",
     flavor: "Cheddar",
@@ -44,7 +44,7 @@ function returnObjectLiteral() {
 // Fails parseGit function #6... but passes 7. Printed to console and everything worked fine. 
 // I'm guessing it's an issue with the testing code
 //your code here
-var MessageLog = function(user) {
+function MessageLog(user) {
   this.user = user;
   this.lastMessage = undefined;
   this.sentMessageCount = 0;
@@ -52,7 +52,7 @@ var MessageLog = function(user) {
   this.sentMessageArray = [];
   this.logMessage = function (messageText, direction) {
     if (direction === 0) {
-	  this.lastMessage = messageText;
+      this.lastMessage = messageText;
       this.sentMessageArray.unshift(messageText);
       this.sentMessageCount++;
       this.sentMessageArray = this.sentMessageArray.splice(0, 5);
