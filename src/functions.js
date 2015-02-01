@@ -32,17 +32,15 @@ var barType = typeof bar;
 */
 
 //your code here
-bar = function(inputArray) {
-  for (var i = 0; i < inputArray.length; i++) {
-    try {
-	  inputArray[i] = inputArray[i] * 2;
+bar = function (inputArray) {
+  var index;
+  for (index = 0; index < inputArray.length; index++) {
+    if (typeof inputArray[index] !== "number") {
+      return false;
     }
+    inputArray[index] = inputArray[index] * 2;
   }
   return true;
-  
-  catch(err) {
-	return false;
-  }	
 }
 //end your code
 
@@ -53,10 +51,11 @@ bar = function(inputArray) {
 * @property {Date} date - the date of the commit as a JS Date object
 * @property {string} message - the commit message
 */
+
 function GitLog(hash, date, message) {
-    this.hash = hash;
-    this.date = date;
-    this.message = message;
+  this.hash = hash;
+  this.date = date;
+  this.message = message;
 }
 
 /**
@@ -79,20 +78,21 @@ function GitLog(hash, date, message) {
 */
 
 //your code here
-function parseGit(arrayOfLogs) {
+function parseGit(logArray) {
   var gitLogStorage = [];
   var hash;
   var date;
   var message;
-  var startTracker;
-  for ( var i = 0; i < arrayOfLogs.length; i++) {
-	startTracker = 0;
-	hash = arrayOfLogs[i].substr(startTracker, arrayOfLogs[i].indexOf(" "));
-	startTracker = arrayOfLogs[i].indexOf(" ");
-	date = arrayOfLogs[i].substr(startTracker, arrayOfLogs[i].indexOf("\"") - startTracker);
-	startTracker = arrayOfLogs[i].indexOf("\"");
-	message = arrayOfLogs[i].substr(startTracker, arrayOfLogs[i].length - startTracker);
-	gitLogStorage[i] = GitLog(hash, date, message);
+  var start;
+  var i;
+  for (i = 0; i < logArray.length; i++) {
+    start = 0;
+    hash = logArray[i].substr(start, logArray[i].indexOf(" "));
+    start = logArray[i].indexOf(" ");
+    date = logArray[i].substr(start, logArray[i].indexOf("\"") - start);
+    start = logArray[i].indexOf("\"");
+    message = logArray[i].substr(start, logArray[i].length - start);
+    gitLogStorage[i] = GitLog(hash, date, message);
   }
   return gitLogStorage;
 }
